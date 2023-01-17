@@ -4,7 +4,12 @@
     margin: 0;
     padding: 0;
 }
-
+li{
+    list-style-type: none;
+}
+li a{
+    text-decoration: none;
+}
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -19,6 +24,9 @@
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+}
+.menu-icon{
+    display: none;
 }
 
 .navlink-container {
@@ -48,6 +56,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* align-items: center; */
     gap: 10px;
 }
 
@@ -59,6 +68,7 @@
     border: 0;
     color: #fff;
 }
+/* Info  */
 
 /* Online courses style */
 
@@ -80,3 +90,55 @@
 .single-course{
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
 }
+.info-section{
+    margin-top: 50px;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+
+}
+.single-info{
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Footer CSS starts here */
+footer {
+    background-color: #282531;
+    color: #fff;
+}
+.footer-links {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+.footer-links a{
+    color: #fff;
+}
+@media only screen and (max-width: 576px) {
+    .footer-links,.courses,.info-section,.banner-container{
+        grid-template-columns: 1fr;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .navlink-container{
+        display: none;
+    }
+    
+  }
+@media only screen and (min-width:577px) and (max-width: 992px) {
+    .info-section{
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+
+/* #282531 */
